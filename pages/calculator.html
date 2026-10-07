@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hitung Biaya Sewa</title>
+    <link rel="stylesheet" href="../styles/home.css">
+</head>
+    
+<body>
+    <header class="navbar">
+        <img src="../assets/logo.png" alt="Logo Gaspol Rental">
+		<a href="./home.html" class="logo">Gaspol Rental</a>
+		<ul class="menu">
+			<li><a href="./home.html">Home</a></li>
+			<li><a href="./products.html">Produk</a></li>
+			<li><a href="./gallery.html">Galeri</a></li>
+			<li><a href="./about.html">Tentang Kami</a></li>
+			<li><a href="./contact.html">Kontak Kami</a></li>
+			<li><a href="./calculator.html">Hitung Sewa</a></li>
+			<li><a href="./profile.html">Profil</a></li>
+		</ul>
+    </header>
+
+    <main>
+        <h1>Hitung Biaya Sewa Kendaraan</h1>
+        <div>
+        <form id="hitung-sewa">
+            <div>
+            <label for="vehicles">Kendaraan</label>
+            <select id="vehicles" name="vehicles">
+            <option value="nmax">Yamaha NMAX</option>
+            <option value="beat">Honda Beat</option>
+            <option value="adv">Honda ADV</option>
+            <option value="avanza">Toyota Avanza</option>
+            <option value="innova">Toyota Innova</option>
+            <option value="agya">Toyota Agya</option>
+            </select>
+            </div>
+
+            <div>
+            <label for="ambil">Tanggal ambil</label>
+            <input type="date" id="ambil" name="ambil">
+            </div>
+            
+            <div>
+            <label for="kembali">Tanggal kembali</label>
+            <input type="date" id="kembali" name="kembali">
+            </div>
+            
+            <div>
+            <input type="checkbox" id="driver" name="driver" value="driver">
+            <label for="driver">Menggunakan Driver (Rp.150.000 per hari)</label>
+            </div>
+            
+            <div>
+            <input type="checkbox" id="antar-jemput" name="antar-jemput" value="antar-jemput">
+            <label for="antar-jemput">Antar-jemput (Rp.50.000)</label><br>
+            </div>
+            
+            <div>
+            <input type="checkbox" id="antar-jemput" name="antar-jemput" value="antar-jemput">
+            <label for="helm">Helm Tambahan (Rp.10.000 per hari)</label><br>
+            </div>
+            
+            <button type="submit">Hitung</button>
+            <p id="message" class="form-message"></p>
+        </form>
+        </div>
+
+        <div class="result">
+            
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            
+        <div>
+            <img src="../assets/logo.png" alt="Logo Gaspol Rental">
+            <p>Gaspol Rental</p>
+            <p>Rental mobil dan motor.</p>
+            <p>Mudah. Nyaman.</p>
+            <p>Terpecaya.</p>
+        </div>
+
+        <div>
+        <ul class="footer-menu">
+			<li><a href="./home.html">Home</a></li>
+			<li><a href="./products.html">Produk</a></li>
+			<li><a href="./gallery.html">Galeri</a></li>
+			<li><a href="./about.html">Tentang Kami</a></li>
+			<li><a href="./contact.html">Kontak Kami</a></li>
+			<li><a href="./calculator.html">Hitung Sewa</a></li>
+			<li><a href="./profile.html">Profil</a></li>
+		</ul>
+        </div>
+
+        <div>
+            <p>Kontak</p>
+            <p>Jl. Contoh No.1</p>
+            <p>0812-0000-0000</p>
+            <p>info@gaspol.id</p>
+        </div>
+
+        <div>
+            <p>Jam Buka</p>
+            <p>Senin-Minggu</p>
+            <p>07.00-21.00</p>
+        </div>
+        
+        </div>
+        <div>
+            <p>© 2026 Gaspol Rental</p>
+        </div>
+    </footer>
+</body>
+</html>
