@@ -25,20 +25,25 @@
     </header>
 
     <main>
-        <h1>KONTAK KAMI</h1>
-        <form id="contact" class="auth-form">
-          <label for="name">Nama</label>
-          <input type="name" id="name" placeholder="Isi Nama Anda" required>
+        <h1 class="page-title">KONTAK KAMI</h1>
+        <section class="contact-section section-card">
+        <form id="contact" class="auth-form contact-form">
+          <label class="auth-form label" for="email">Email</label>
+          <input class="auth-form input" type="text" id="email" placeholder="Isi Email Anda" required>
 
-          <label for="email">Email</label>
-          <input type="email" id="email" placeholder="Isi Email Anda" required>
+          <label class="auth-form label" for="phone">Nomor Telepon</label>
+          <input class="auth-form input" type="text" id="phone" placeholder="Isi Nomor Telepon Anda" required>
 
-          <label for="message">Pesan</label>
-          <textarea id="message" placeholder="Isi Pesan Anda" rows="4" id="message"></textarea>
+          <label class="auth-form label" for="subject">Subjek Pesan</label>
+          <input class="auth-form input" type="text" id="subject" placeholder="Isi Subjek Pesan" required>
+              
+          <label class="auth-form label" for="contact-message">Pesan</label>
+          <textarea id="contact-message" class="auth-contact-message" placeholder="Isi Pesan Anda" rows="4" required></textarea>
 
-          <button type="submit">Kirim</button>
-          <p id="message" class="form-message"></p>
+          <button class="auth-btn" type="submit">Kirim</button>
+          <p id="contact-feedback" class="form-message"></p>
         </form>
+        </section>
     </main>
 
     <footer>

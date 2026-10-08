@@ -25,12 +25,13 @@
     </header>
 
     <main>
-        <h1>Hitung Biaya Sewa Kendaraan</h1>
-        <div>
-        <form id="hitung-sewa">
-            <div>
+        <h1 class="page-title">Hitung Biaya Sewa Kendaraan</h1>
+        <section class="calculator-layout">
+        <div class="calculator-section section-card">
+        <form class="auth-form calc-form" id="hitung-sewa">
+            <div class="form-group">
             <label for="vehicles">Kendaraan</label>
-            <select id="vehicles" name="vehicles">
+            <select class="calc-select" id="vehicles" name="vehicles">
             <option value="nmax">Yamaha NMAX</option>
             <option value="beat">Honda Beat</option>
             <option value="adv">Honda ADV</option>
@@ -40,39 +41,66 @@
             </select>
             </div>
 
-            <div>
-            <label for="ambil">Tanggal ambil</label>
-            <input type="date" id="ambil" name="ambil">
+            <div class="form-group">
+            <label class="auth-form label" for="ambil">Tanggal ambil</label>
+            <input class="auth-form input" type="date" id="ambil" name="ambil">
             </div>
             
-            <div>
-            <label for="kembali">Tanggal kembali</label>
-            <input type="date" id="kembali" name="kembali">
+            <div class="form-group">
+            <label class="auth-form label" for="kembali">Tanggal kembali</label>
+            <input class="auth-form input" type="date" id="kembali" name="kembali">
             </div>
             
-            <div>
-            <input type="checkbox" id="driver" name="driver" value="driver">
-            <label for="driver">Menggunakan Driver (Rp.150.000 per hari)</label>
+            <div class="form-group form-check">
+            <input class="check-input" type="checkbox" id="driver" name="driver" value="driver">
+            <label class="check-label" for="driver">Menggunakan Driver (Rp.150.000 per hari)</label>
             </div>
             
-            <div>
-            <input type="checkbox" id="antar-jemput" name="antar-jemput" value="antar-jemput">
-            <label for="antar-jemput">Antar-jemput (Rp.50.000)</label><br>
+            <div class="form-group form-check">
+            <input class="check-input" type="checkbox" id="antar-jemput" name="antar-jemput" value="antar-jemput">
+            <label class="check-label" for="antar-jemput">Antar-jemput (Rp.50.000)</label><br>
             </div>
             
-            <div>
-            <input type="checkbox" id="antar-jemput" name="antar-jemput" value="antar-jemput">
-            <label for="helm">Helm Tambahan (Rp.10.000 per hari)</label><br>
+            <div class="form-group form-check">
+            <input class="check-input" type="checkbox" id="helm" name="helm" value="helm">
+            <label class="check-label" for="helm">Helm Tambahan (Rp.10.000 per hari)</label><br>
             </div>
             
-            <button type="submit">Hitung</button>
+            <button class="button" type="submit">Hitung</button>
             <p id="message" class="form-message"></p>
         </form>
         </div>
-
-        <div class="result">
-            
+        
+        <div class="result-section section-card">
+            <h2 class="section-title">Ringkasan Biaya</h2>
+            <ul class="result-list">
+                <li class="result-item">Durasi 
+                    <span class="result-value">10 </span><span class="result-label">hari</span>
+                </li> 
+                
+                <li class="result-item">Sewa 
+                    <span class="result-label">Rp </span><span class="result-value"></span>
+                </li> 
+                
+                <li class="result-item">Sopir 
+                    <span class="result-label">Rp</span> <span class="result-value"></span>
+                </li> 
+                
+                <li class="result-item">Antar Jemput 
+                    <span class="result-label">Rp</span> <span class="result-value"></span>
+                </li>
+                
+                <li class="result-item">Helm
+                    <span class="result-label">Rp</span> <span class="result-value"></span>
+                </li> 
+                
+                <li class="result-item">Diskon
+                    <span class="result-label">-Rp</span> <span class="result-value"></span>
+                </li> 
+            </ul>
+            <p class="result-total">Total: <span class="result-label">Rp</span> <span class="result-total-value"></span></p>
         </div>
+        <section class="calculator-layout">
     </main>
 
     <footer>
