@@ -153,6 +153,7 @@ main {
   border-radius: 5px;
   font: inherit; 
   outline: none;
+  padding-left: 10px;
 }
 
 .auth-contact-message {
@@ -163,13 +164,6 @@ main {
     border-radius: 5px;
     font: inherit; 
     outline: none;
-}
-
-.auth-form input::placeholder {
-    padding-left: 10px;
-}
-
-textarea::placeholder {
     padding-left: 10px;
 }
 

@@ -34,12 +34,6 @@
             <label class="auth-form label" for="email">Email</label>
             <input type="text" class="auth-form input" id="email" required>
     
-            <label class="auth-form label" for="old-password">Password Lama</label>
-            <input type="text" class="auth-form input" id="old-password" required>
-
-            <label class="auth-form label" for="new-password">Password Baru</label>
-            <input type="text" class="auth-form input" id="new-password" required>
-    
             <button type="submit" class="auth-btn">Simpan Perubahan</button>
             <p id="message" class="form-message"></p>
         </form>
@@ -48,7 +42,7 @@
         <section class="account-actions section-card">
             <div class="action-list">
                 <div class="action-item">
-                    <a class="btn-logout" id="logout" href="./auth.html">Logout</a>
+                    <a class="btn-logout" id="logout">Logout</a>
                 </div>
 
                 <div class="action-item">
@@ -56,11 +50,11 @@
                 </div>
             </div>
             
-            <div class="modal-hidden">
+            <div class="modal-hidden" id="logout-modal">
                 <div class="modal-content">
                   <span class="modal-close">&times;</span>
                   <h2 class="modal-title">Anda yakin untuk menghapus akun</h2>
-                  <a class="btn-delete-confirm" id="delete-account" href="./auth.html">Hapus Akun Saya</a>
+                  <a class="btn-delete-confirm" id="delete-account">Hapus Akun Saya</a>
             </div>
             </div>
         </section>
@@ -107,5 +101,6 @@
             <p class="footer-copyright">© 2026 Gaspol Rental</p>
         </div>
     </footer>
+    <script src="/scripts/profile.js"></script>
 </body>
 </html>

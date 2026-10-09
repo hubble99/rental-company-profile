@@ -111,8 +111,8 @@ app.post("/login", (req, res) => {
   
 });
 
-app.delete("/delete", (req, res) => {
-  const { customer_id } = req.body;
+app.delete("/delete/:customer_id", (req, res) => {
+  const {customer_id} = req.params;
 
   const query = "DELETE FROM customers WHERE customer_id = ?";
   
@@ -123,26 +123,26 @@ app.delete("/delete", (req, res) => {
       return res.status(404).json({ message: "Customer not found" });
     }
 
-    res.json({ message: "Your aaccount deleted" });
+    res.status(200).json({ message: "Succes delete your accoount" });
   });
 });
 
 app.put("/update/:customer_id", (req, res) => {
-  const {name, email, password} = req.body;
+  const {name, email} = req.body;
   const {customer_id } = req.params;
   
-  if (!name || email === undefined || password === undefined) {
-    return res.status(400).json({ message: "Name, email, and password are required" });
+  if (!name || email === undefined) {
+    return res.status(400).json({ message: "Name and email are required" });
   }
 
   const query = `
     UPDATE customers
-    SET name = ?, email = ?, password = ?
+    SET name = ?, email = ?
     WHERE customer_id = ?
   `;
 
   db.query(
-    query, [name, email, password, customer_id],
+    query, [name, email, customer_id],
     (error, result) => {
       if (error) return res.status(500).json({ message: error.message });
 
@@ -172,24 +172,15 @@ app.get("/api/customer-status-login", (req, res) => {
 
 app.put("/api/customer-logout/:customer_id", (req, res) => {
   const { customer_id } = req.params;
-  const query1 = `
+  const query = `
     UPDATE customers
     SET login_status = 0
     WHERE customer_id = ?;
     `
 
-  const query2 = `
-    SELECT login_status
-    FROM customers
-    WHERE customer_id = ?`
-  
-  db.query(query1, [customer_id], (error, rows) => {
+  db.query(query, [customer_id], (error, rows) => {
     if (error) return res.status(500).json({ message: error.message });
-
-    db.query(query2, [customer_id], (error, rows) => {
-      if (error) return res.status(500).json({ message: error.message });
-      res.status(200).json(rows[0]);
-    })
+    res.status(200).json({ message: "Logout Success" });
   }
   );
 });
