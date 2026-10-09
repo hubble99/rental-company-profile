@@ -56,10 +56,7 @@ main {
   border-radius: 5px;
   font: inherit; 
   outline: none;
-}
-
-.auth-form input::placeholder {
-    padding-left: 10px;
+  padding-left: 10px;
 }
 
 .auth-form input:focus {
@@ -85,10 +82,11 @@ main {
     padding-bottom: 10px;
 }
 
-.auth-footer a {
+.auth-link {
     color: #2563eb; 
     text-decoration: none; 
     font-weight: 700;
+    cursor: pointer;
 }
 
 .form-message {

@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS customers (
 	name VARCHAR(50),
 	email VARCHAR(50),
 	password VARCHAR(50),
-	login_status int DEFAULT(0)
+	login_status BOOLEAN DEFAULT(FALSE)
 );
 
 CREATE TABLE IF NOT EXISTS contact_messages (

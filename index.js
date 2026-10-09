@@ -27,6 +27,38 @@ db.connect((error) => {
   console.log("Database connected");
 });
 
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/pages/auth.html"));
+});
+
+app.get("/home", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/pages/home.html"));
+});
+
+app.get("/about", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/pages/about.html"));
+});
+
+app.get("/calculator", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/pages/calculator.html"));
+});
+
+app.get("/contact", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/pages/contact.html"));
+});
+
+app.get("/gallery", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/pages/gallery.html"));
+});
+
+app.get("/products", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/pages/products.html"));
+});
+
+app.get("/profile", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/pages/profile.html"));
+});
+
 app.get("/hello", (req, res) => {
   res.json("Hello World");
 });
@@ -95,7 +127,7 @@ app.delete("/delete", (req, res) => {
   });
 });
 
-app.put("/update:customer_id", (req, res) => {
+app.put("/update/:customer_id", (req, res) => {
   const {name, email, password} = req.body;
   const {customer_id } = req.params;
   
@@ -138,7 +170,7 @@ app.get("/api/customer-status-login", (req, res) => {
   );
 });
 
-app.get("/api/customer-logout:customer_id", (req, res) => {
+app.put("/api/customer-logout/:customer_id", (req, res) => {
   const { customer_id } = req.params;
   const query1 = `
     UPDATE customers
@@ -162,7 +194,7 @@ app.get("/api/customer-logout:customer_id", (req, res) => {
   );
 });
 
-app.post("/api/contact:customer_id", (req, res) => {
+app.post("/api/contact/:customer_id", (req, res) => {
   const { email, phone, subject, message } = req.body;
   const { customer_id } = req.params;
   

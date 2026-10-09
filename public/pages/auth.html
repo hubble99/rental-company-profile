@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Register</title>
+  <link rel="stylesheet" href="/styles/auth.css">
+</head>
+<body>
+  <main>
+      
+    <div class="auth-logo">
+        <img class="auth-logo-img" src="/assets/logo.png" alt="Logo Gaspol Rental">
+    </div>
+      
+    <section class="auth-section auth-login" id="login-page">
+      <div class="auth-card">
+          <h1 class="auth-title">Masuk</h1>
+          <p class="auth-subtitle">Silahkan masukkan email dan passord anda</p>
+
+          <form id="loginForm" class="auth-form">
+            <label for="loginEmail" class="auth-label">Email</label>
+            <input type="email" class="auth-input" id="loginEmail" placeholder="you@example.com" required>
+    
+            <label for="loginPassword" class="auth-label">Password</label>
+            <input type="password" class="auth-input" id="loginPassword" placeholder="Password" required>
+    
+            <button type="submit" class="auth-btn">Login</button>
+            <p id="loginMessage" class="form-message"></p>
+          </form>
+
+          <p class="auth-footer">Belum punya akun <a class="auth-link" id="linkRegister">Daftar</a></p>
+      </div>
+    </section>
+    
+    <section class="auth-section auth-register" id="register-page" style="display: none;">
+        <div class="auth-card">
+        <h1 class="auth-title">Daftar Akun</h1>
+        <p class="auth-subtitle">Silahkan membuat akun.</p>
+
+        <form id="registerForm" class="auth-form">
+          <label class="auth-label" for="registerName">Nama</label>
+          <input type="text" id="registerName" class="auth-input" placeholder="Your name" required>
+  
+          <label class="auth-label" for="registerEmail">Email</label>
+          <input type="email " id="registerEmail" class="auth-input" placeholder="you@example.com" required>
+  
+          <label class="auth-label" for="registerPassword">Password</label>
+          <input type="password" id="registerPassword" class="auth-input" placeholder="Password" required>
+  
+          <button type="submit" class="auth-btn">Register</button>
+          <p id="registerMessage" class="form-message"></p>
+        </form>
+
+        <p class="auth-footer">Sudah punya akun? <a class="auth-link" id="linkMasuk">Masuk</a></p>
+        </div>
+        
+    </section>
+  </main>
+  <script src="/scripts/auth.js"></script>
+</body>
+</html>
