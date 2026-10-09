@@ -21,4 +21,6 @@ CREATE TABLE IF NOT EXISTS contact_messages (
 	FOREIGN KEY (customer_id) REFERENCES customers(customer_id) ON DELETE SET NULL
 );
 
+select * from contact_messages;
+
 select * from customers;
